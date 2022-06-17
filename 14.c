@@ -14,6 +14,6 @@ void main()
         else
             odd+=1;
 	}
-	printf("The number of even integers entered are ", even);
-	printf("\nThe number of odd integers entered are ", odd);
+	printf("The number of even integers entered are %d ", even);
+	printf("\nThe number of odd integers entered are %d", odd);
 }
