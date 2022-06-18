@@ -3,7 +3,7 @@
 void main()
 {
     char x,a[100],b[100],c[100];
-    int l,k;
+    int l,k,z;
 
     printf("Enter string A: ");
     gets(a);
@@ -30,5 +30,8 @@ void main()
     //CONCATNATE ADDS B INTO A
     strcat(a,b);
     printf("The concatnated string A and B is %s",a);
-
+    //CONCATNATE ADDS B INTO A with option of number of characters.
+    printf("Enter the length you want to CONCATNATE");
+    scanf("%d", &z);
+    strncpy(a,b,z)
 }
