@@ -17,7 +17,7 @@ void main(){
     case 2:
         printf("Enter your ID: ");
         scanf("%d",&a.id);
-
+        break;
     default:
         break;
     }
