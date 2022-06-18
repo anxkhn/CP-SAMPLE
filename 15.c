@@ -8,15 +8,16 @@ void main()
 	int a[n];
 	for (i = 0; i < n; i++)
 	{
+		printf("\n Enter the elements: ");
 		scanf("%d", &a[i]);
 	}
 	int max = a[0];
 	for (i = 0; i < n; i++)
 	{
 		if (a[i] > max)
-		{	
-			printf("Enter elements  \n");
+		{
 			max = a[i];
 		}
 	}
+	printf("\n the largest element in array is %d",max);
 }
