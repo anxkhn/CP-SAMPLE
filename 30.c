@@ -2,25 +2,27 @@
 void main()
 {
     char a[100], b[100];
-    int i, l1 = 0, l2 = 0;
+    int i=0, l1 = 0, l2 = 0;
 
     printf("Enter two strings:\n");
     gets(a);
     gets(b);
-    while (a[l1] != '\0')
+    while (a[i] != '\0')
     {
         l1++;
+        i++;
     }
-    while (b[l2] != '\0')
+    i = 0;
+    while (b[i] != '\0')
     {
         l2++;
+        i++;
     }
-
-    if (a[i] > b[i])
+    if ( l1 > l2 )
     {
         printf("%s string is greater", a);
     }
-    else if (a[i] < b[i])
+    else if (l1 < l2)
     {
         printf("%s string is greater", b);
     }
