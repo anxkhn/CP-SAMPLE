@@ -1,4 +1,3 @@
-#include <conio.h>
 #include <stdio.h>
 
 void swap(int, int);
