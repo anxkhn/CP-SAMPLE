@@ -1,4 +1,3 @@
-#include <conio.h>
 #include <stdio.h>
 
 void sum(int x[], int y[], int z[], int n);
