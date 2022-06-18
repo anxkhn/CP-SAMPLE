@@ -1,33 +1,58 @@
 #include <stdio.h>
-void main()
-{
-    char a[100], b[100];
-    int i=0, l1 = 0, l2 = 0;
 
-    printf("Enter two strings:\n");
-    gets(a);
-    gets(b);
-    while (a[i] != '\0')
+int compareStrings(char* x, char* y)
+{
+    int flag = 0;
+    while (*x != '\0') {
+        if (*x == *y) {
+            x++;
+            y++;
+        }else{
+            flag = 1;
+            break;
+        }
+    }
+    return flag;
+}
+ 
+int main()
+{
+    char s1[100], s2[100];
+    int i = 0, length1=0, length2=0;
+    printf("Enter both the strings\n");
+    scanf("%s%s", &s1, &s2);
+
+    //calculating length
+    while (s1[i] != '\0')
     {
-        l1++;
+        length1++;
         i++;
     }
-    i = 0;
-    while (b[i] != '\0')
+
+    i=0;
+    while (s2[i] != '\0')
     {
-        l2++;
+        length2++;
         i++;
     }
-    if ( l1 > l2 )
+
+    //comparing length
+    if ( length1 > length2 )
     {
-        printf("%s string is greater", a);
+        printf("%s is greater", s1);
     }
-    else if (l1 < l2)
+    else if (length1 < length2)
     {
-        printf("%s string is greater", b);
+        printf("%s is greater", s2);
     }
     else
     {
-        printf("The strings %s and %s are equal", a, b);
+        //comparing equality of strings
+        if(compareStrings(s1, s2)==0){
+            printf("The strings are equal");
+        }else{
+            printf("Strings are of the same length but unequal");
+        }
     }
+    return 0;
 }

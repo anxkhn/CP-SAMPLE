@@ -2,31 +2,23 @@
 
 void main()
 {
-	int i, j, n, temp;
-	printf("Enter n = ");
+	int n, i, a[100];
+	printf("Enter a number :\n");
 	scanf("%d", &n);
-	int a[n];
-	printf("Enter elements \n");
 	for (i = 0; i < n; i++)
 	{
+		printf("Enter the value \n");
 		scanf("%d", &a[i]);
 	}
-
-	for (i = 0; i < n; i++)
+	int max = a[0];
 	{
-		for (j = 0; j < n - 1; j++)
+		for (i = 0; i < n; i++)
 		{
-			if (a[i] < a[j])
+			if (a[i] > max)
 			{
-				temp = a[i];
-				a[i] = a[j];
-				a[j] = temp;
+				max = a[i];
 			}
 		}
-	}
-	printf("Ascending order is ");
-	for (i = 0; i < n; i++)
-	{
-		printf(" %d ", a[i]);
+		printf("the largest value is %d", max);
 	}
 }
