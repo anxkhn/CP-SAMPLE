@@ -17,5 +17,6 @@ void main()
 	}
 	avg = sum;
 	avg = avg / n;
-	printf("The average of the numbers entered is %.4f", avg);
+  printf("The sum of the numbers entered is %d", sum);
+	printf("\nThe average of the numbers entered is %.4f", avg);
 }
