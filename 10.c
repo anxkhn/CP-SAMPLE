@@ -1,20 +1,19 @@
-#include <conio.h>
 #include <stdio.h>
 
 void main()
 {
-	int number = 100, digit1, digit2, digit3, t;
-	while (number <= 999)
+	int a, rem, sum, x;
+	for(a=100;a<=999;a++)
 	{
-		digit1 = number - ((number / 10) *10);
-		digit2 = (number / 10) - ((number / 100) *10);
-		digit3 = (number / 100) - ((number / 1000) *100);
-		t = (digit1 *digit1 *digit1) + (digit2 *digit2 *digit2) + (digit3 *digit3 *digit3);
-		if (t == number)
+		x=a;
+		sum=0;
+		while(x>0)
 		{
-			printf("%d \n", t);
+			rem=x%10;
+			sum=sum+rem*rem*rem;
+			x=x/10;
 		}
-
-		number++;
+		if(sum==a)
+			printf("\n%d", a);
 	}
 }
