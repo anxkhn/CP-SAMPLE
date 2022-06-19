@@ -1,29 +1,38 @@
-#include <stdio.h>
-
-int main()
+#include<stdio.h>
+#include<stdio.h>
+void main()
 {
-	int i, j, m, n;
-	float a[10][10], sum = 0.0, avg;
-	printf("Enter row and column size:\n");
-	scanf("%d%d", &m, &n);
-	printf("Enter matrix elements:\n");
-	for (i = 0; i < m; i++)
-	{
-		for (j = 0; j < n; j++)
-		{
-			printf("a[%d][%d]=", i+1, j+1);
-			scanf("%f", &a[i][j]);
-		}
-	}
-	for (i = 0; i < m; i++)
-	{
-		for (j = 0; j < n; j++)
-		{
-			sum = sum + a[i][j];
-		}
-	}
-	avg = sum / (m*n);
-	printf("Sum = %.4f\n", sum);
-	printf("Average = %.4f", avg);
+    int i,j,r;
+    int a[100][100];
+    printf("Enter the no of rows for square matrix(columns will be same):");
+    scanf("%d",&r);
 
+    for(i=0;i<r;i++)
+    {
+        for(j=0;j<r;j++)
+        {
+            printf("enter the element:");
+            scanf("%d",&a[i][j]);
+        }
+    }
+
+    printf("\nmatrix A is\n");
+    for(i=0;i<r;i++)
+    {
+        for(j=0;j<r;j++)
+        {
+            printf("%d\t",a[i][j]);
+        }
+        printf("\n");
+    }
+
+    printf("\nmatrix A after transpose\n");
+    for(i=0;i<r;i++)
+    {
+        for(j=0;j<r;j++)
+        {
+            printf("%d\t",a[j][i]);
+        }
+        printf("\n");
+    }
 }

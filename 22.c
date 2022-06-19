@@ -1,19 +1,6 @@
 #include <stdio.h>
 
-void sum(int x[], int y[], int z[], int n)
-{
-	int s1, s2, s3, sum = 0, i;
-	for (i = 1; i <= n; i++)
-	{
-		s1 = (x[i] *x[i] *y[i]);
-		s2 = (y[i] *y[i] *x[i]);
-		s3 = (x[i] *y[i] *z[i]);
-		sum = sum + s1 + s2 + s3;
-	}
-
-	printf("T= %d", sum);
-}
-25 Write a program to store and display the name, roll number and total PCM marks for ‘n’ 
+void sum(int x[], int y[], int z[], int n);
 void main()
 {
 	int x[100], y[100], z[100], n, i;
@@ -38,4 +25,18 @@ void main()
 	}
 
 	sum(x, y, z, n);
+}
+
+void sum(int x[], int y[], int z[], int n)
+{
+	int s1, s2, s3, sum = 0, i;
+	for (i = 1; i <= n; i++)
+	{
+		s1 = (x[i] *x[i] *y[i]);
+		s2 = (y[i] *y[i] *x[i]);
+		s3 = (x[i] *y[i] *z[i]);
+		sum = sum + s1 + s2 + s3;
+	}
+
+	printf("T= %d", sum);
 }

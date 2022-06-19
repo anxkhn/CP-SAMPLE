@@ -1,38 +1,22 @@
-#include <stdio.h>  
-  
-int main ()  
-{  
-	int n;
-	printf("Enter the value of n\n");
-	scanf("%d", &n);
-	for(int a=1; a<=n; a++){
-		for(int b=1; b<=(n-a)*2; b++){
-			printf(" ");
-		}
-		for(int c=a; c<=2*a-1; c++){
-			printf("*");
-			printf(" ");
-		}
-		for(int c=2*a-2; c>=a; c--){
-			printf("*");
-			printf(" ");
-		}
-		printf("\n");
-	}	
-	for(int a=n-1; a>=1; a--){
+#include <stdio.h>
 
-		for(int b=1; b<=(n-a)*2; b++){
-			printf(" ");
-		}
-		for(int c=a; c<=2*a-1; c++){
-			printf("*");
-			printf(" ");
-		}
-		for(int c=2*a-2; c>=a; c--){
-			printf("*");
-			printf(" ");
-		}
-		printf("\n");
+void main()
+{
+	int n, i, a[100], sum = 0;
+	float avg;
+	printf("Enter total number of integers ");
+	scanf("%d", &n);
+	for (i = 0; i <= n - 1; i++)
+	{
+		printf("Enter a value: ");
+		scanf("%d", &a[i]);
 	}
-    return 0;     
-}  
+	for (i = 0; i <= n - 1; i++)
+	{
+		sum = sum + a[i];
+	}
+	avg = sum;
+	avg = avg / n;
+  printf("The sum of the numbers entered is %d", sum);
+	printf("\nThe average of the numbers entered is %.4f", avg);
+}
